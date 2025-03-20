@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById('generated-image-canvas');
 const ctx = canvas.getContext('2d');
 const textInput = document.getElementById('text-input');
@@ -5,7 +6,7 @@ const imageSelector = document.getElementById('image-selector');
 const downloadButton = document.getElementById('download-button');
 
 let textX = 540;
-let textY = 610;
+let textY = 925;
 
 // Load original image
 const img = new Image();
@@ -40,14 +41,14 @@ function drawImage() {
 
   // Add text overlay
   ctx.font = '28px "Readex Pro"';
-  ctx.fillStyle = '#195aa4';
+  ctx.fillStyle = '#FFFFFF';
   ctx.textAlign = 'center';
-  ctx.fillText(textInput.value || "شركة مساعد محمد بن عجلان ", textX, textY);
+  ctx.fillText(textInput.value || "", textX, textY);
 
   // Update download link
   let dataURL = canvas.toDataURL();
   downloadButton.href = dataURL;
-  downloadButton.download = 'Alajlan-Eid-Aladha-Greeting-2024.png';
+  downloadButton.download = 'تهنئتك.png';
 }
 const arrowButtons = document.getElementById('arrow-buttons');
 arrowButtons.addEventListener('click', (event) => {
@@ -67,3 +68,14 @@ break;
 }
 drawImage();
 });
+
+
+
+
+
+
+
+
+
+
+
